@@ -1,0 +1,22 @@
+{
+  "name": "imagine-node",
+  "version": "2.0.0",
+  "description": "Imagine web proxy but on nodejs for replit and hosting services",
+  "type": "module",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "Xoui",
+  "license": "MIT",
+  "dependencies": {
+    "@tomphttp/bare-server-node": "^1.2.2",
+    "serve-static": "^1.15.0"
+  }
+}

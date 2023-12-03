@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=true" />
+    <title>Imagine</title>
+    <meta name="description" content="made by Fiizy2.0 on discord" />
+    <meta name="keywords" content="shit post" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e" />
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="shortcut icon" content="./image.png">
+    <link rel="stylesheet" href="test.css">
+	<div id="particles-js"></div>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a onclick="toggleSidebar()" class="app-link">Apps</a>
+        <a href="#" class="game-link"><i class="fas fa-gamepad"></i> Games</a>
+      </nav>
+      
+    <div class="main-wrapper">
+    <div class="flex-center logo-wrapper header-center">
+        <img class="logo" src="image.png" />
+        <h1>Imagine</h1>
+    </div>
+    <div id="particles-js"></div>
+    <div class="flex-center desc">
+    </div>
+    <button onclick="openURL('https://netflix.com')"> Netflix</button>
+    <button onclick="openURL('https://discord.com/app')"> Discord</button>
+    <button onclick="openURL('https://rpc.lol')"> RPC</button>
+    <button onclick="openURL('https://youtube.com')"> Youtube</button>
+    <button onclick="openURL('https://chat.openai.com')"> CHATGPT</button>
+    <button onclick="openURL('https://scratch.mit.edu')"> Scratch</button>
+    <button onclick="openURL('https://spotify.com')"> Spotify</button>
+
+
+
+
+
+    <form id="form" class="flex-center">
+        <input id="address" placeholder="put url in" />
+        <h5>test</h5>
+    </form>
+
+   
+
+
+    <div class="sidebar" id="sidebar">
+        <h2>Sidebar Content</h2>
+        asdasdsadsa
+        <p>Your sidebar content goes here.</p>
+    </div>
+
+
+    <script>
+    function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+            
+            // Check if the sidebar is active
+            if (sidebar.classList.contains('active')) {
+                // Load new content into the sidebar when it's toggled
+                sidebar.innerHTML = `
+                    <a href="#" onclick="openUrl('https://google.com')"> a
+                    <img src="data:image/png;base64,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" alt="your-image-alt">
+                    <br>
+                    </a>
+                    <p>Google</p>
+                    
+                `;
+            }
+        }
+    </script>
+
+
+
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <script src="register-sw.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./lmao.js"></script>
+</body>
+
+</html>

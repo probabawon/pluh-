@@ -1,0 +1,30 @@
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+import org.lwjgl.input.Keyboard;
+
+public class KeystrokesModule extends Gui {
+    
+    private Minecraft mc = Minecraft.getMinecraft();
+
+    private boolean wPressed = false;
+    private boolean aPressed = false;
+    private boolean sPressed = false;
+    private boolean dPressed = false;
+    private boolean spacePressed = false;
+    private boolean shiftPressed = false;
+
+    public void tick() {
+        wPressed = Keyboard.isKeyDown(Keyboard.KEY_W);
+        aPressed = Keyboard.isKeyDown(Keyboard.KEY_A);
+        sPressed = Keyboard.isKeyDown(Keyboard.KEY_S);
+        dPressed = Keyboard.isKeyDown(Keyboard.KEY_D);
+        spacePressed = Keyboard.isKeyDown(Keyboard.KEY_SPACE);
+        shiftPressed = Keyboard.isKeyDown(Keyboard.KEY_LSHIFT); // considering left shift here
+    }
+
+    public void render(int x, int y) {
+        drawKey("W", x + 20, y, wPressed);
+        drawKey("A", x, y + 20, aPressed);
+        drawKey("S", x + 20, y + 20, sPressed);
+        drawKey("D", x + 40, y + 20, dPressed);
+        drawKey("Jump", x + 20
